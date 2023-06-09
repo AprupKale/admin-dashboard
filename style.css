@@ -9,6 +9,10 @@
     font-family: 'Antic';
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -73,6 +77,10 @@ body {
     overflow: auto;
 }
 
+.projects-box::-webkit-scrollbar {
+    display: none;
+}
+
 .project {
     background-color: white;
     border-radius: 8px;
@@ -108,6 +116,10 @@ body {
     justify-content: flex-end;
 }
 
+.icons img {
+    padding: 0 2%;
+}
+
 .content h2 {
     margin-bottom: 3%;
 }
@@ -115,11 +127,23 @@ body {
 .announcement-box {
     background-color: white;
     border-radius: 8px;
+    overflow: auto;
+    height: 30vh;
+}
+
+.announcement-box::-webkit-scrollbar {
+    display: none;
 }
 
 .trending-box {
     background-color: white;
     border-radius: 8px;
+    overflow: auto;
+    height: 30vh;
+}
+
+.trending-box::-webkit-scrollbar {
+    display: none;
 }
 
 .announcement {
@@ -130,8 +154,83 @@ body {
 .trending-user {
     border-top: 2px solid #d3d3d3;
     padding: 7%;
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+}
+
+.trending-user img {
+    width: 80%;
+}
+
+.user {
+    align-self: center;
 }
 
 .header {
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: 1fr / 2fr;
+    justify-items: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.header img.icon {
+    width: 40%;
+}
+
+#search-bar {
+    grid-column: 2 / span 9;
+    justify-self: stretch;
+    height: 50%;
+    background-color: #d3d3d3;
+    border-radius: 16px;
+    border: none;
+}
+
+#bell {
+    grid-column: 16;
+}
+
+#profile-small {
+    grid-column: 17;
+    width: 70%;
+}
+
+#user-name {
+    grid-column: 18 / 21;
+}
+
+#profile-big {
+    grid-column: 1 / 3;
+    width: 70%;
+}
+
+#greeting {
+    grid-column: 3 / span 7;
+    justify-self: start;
+    font-weight: bold;
+}
+
+#new {
+    grid-column: 15;
+}
+
+#upload {
+    grid-column: 17;
+}
+
+#share {
+    grid-column: 19;
+}
+
+.header button {
+    background-color: #3A7CA5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    height: 30%;
+    width: 150%;
 }
