@@ -53,6 +53,85 @@ body {
 }
 
 .content {
-    border-top: 5px solid rgb(64, 64, 64, 0.3);
-    background-color: ghostwhite;
+    border-top: 3px solid rgb(64, 64, 64, 0.3);
+    background-color: #d3d3d3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3%;
+    padding: 2%;
+}
+
+.projects {
+    grid-row: 1 / -1;
+}
+
+.projects-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    overflow: auto;
+}
+
+.project {
+    background-color: white;
+    border-radius: 8px;
+    border-left: 8px solid gold;
+    padding: 7%;
+}
+
+.project h3 {
+    font-size: calc(calc(3vw + 5vh) / 5);
+    margin-bottom: 4%;
+}
+
+.project p {
+    font-size: calc(calc(3vw + 5vh) / 7);
+    color: rgb(0, 0, 0, 0.7);
+}
+
+.announcements {
+    grid-column: 2 / -1;
+}
+
+.trending {
+    grid-column: 2 / -1;
+}
+
+.content img {
+    width: 10%;
+}
+
+.icons {
+    margin-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content h2 {
+    margin-bottom: 3%;
+}
+
+.announcement-box {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.trending-box {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.announcement {
+    border-top: 2px solid #d3d3d3;
+    padding: 7%;
+}
+
+.trending-user {
+    border-top: 2px solid #d3d3d3;
+    padding: 7%;
+}
+
+.header {
+    grid-row: 1 / 2;
 }
